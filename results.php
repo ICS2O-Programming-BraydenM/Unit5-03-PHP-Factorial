@@ -1,16 +1,18 @@
 <?php
-	// get user input (both positive integers)
-	$firstNum = intval($_POST["firstNum"]);
-  $secondNum = intval($_POST["secondNum"]);
+	// initialize counter to 1 and factorial to 1 
+	$counter = 1;
+  $facAnswer = 1;
+	
+	// get a positive integer from the user 
+	$userNum = intval($_POST["userNum"]);
 
-	// initialize product as zero
-	$product = 0;
-
-  // use a for loop to calculate product of two positive integers solely using addition 
-	for ($counter = 1; $counter <= $secondNum; $counter++) {
-    $product = $product + $firstNum;
-  }
+  // use a do..while loop to calculate the factorial of a number 
+	do {
+   $facAnswer = $facAnswer * $counter ;
+   //increment the counter 
+   $counter = $counter + 1;
+  } while ($counter <= $userNum);
 
   	// display result back to user 
-	  echo "The product of these two positive integers is " . "$product";
+	  echo "The factorial of this positive integer is " . "$facAnswer";
 ?>

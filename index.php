@@ -13,22 +13,20 @@
   </head>
   <body>
    <center>
-<!-- Adding a JavaScript button that displays factorials -->
+<!-- Adding a button that displays the factorial of a positive integer -->
     <?php
-    echo "<h1>Factorials of numbers program in PHP</h1>";
+    echo "<h1>Factorial of numbers program in PHP</h1>";
     ?>
     <?php
-		echo "<h3>This program will display factorials of a number:</h3>";
+		echo "<h3>This program will display the factorial of a positive integer:</h3>";
     ?>
 		<table>
 			<tr align = "center">
 				<td valign="top" align="right">					
 					<form action="./results.php" method="post" target="results">			
-						<label for="userNum">Enter a maximum number:</label>
-						<input type="number" step="1" id="maxNum"><br><br>		
-            <label for="userNum">Enter a minimum number:</label>
-						<input type="number" step="1" id="minNum"><br><br>		
-						<input type="submit" value="Display Numbers">
+						<label for="userNum">Enter a positive integer:</label>
+						<input type="number" step="1" min="0" name="userNum"><br><br>		
+						<input type="submit" value="Display factorial">
 					</form>
 				</td>
 				<td valign="top" align="left">
@@ -38,8 +36,7 @@
 			</tr>
 		</table>	
 		<!-- Create a space where the user information will be displayed -->
-		<div id="display-results">			
-		</div>
+		<iframe name="results"></iframe>		
    </center>
   </body>
 </html>
